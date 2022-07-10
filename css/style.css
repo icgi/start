@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+    background-size: cover;
+    background-attachment:fixed;
+}
+.start{
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 6px white;
+}
+.time{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 2px;
+}
+.search{
+    margin-top: 50px;
+    text-align: center;
+}
+.box_search{
+    text-align:center;
+    border-radius: 25px;
+    width: 200px;
+    height: 35px;
+    color: black;
+    box-shadow: 0px 0px 3px white;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    transform: scale(1);
+    }
+.box_button{
+    text-align:center;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    box-shadow: 0px 0px 3px white;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+.box_search:hover{
+    width: 200px;
+    box-shadow: 0px 0px 5px white;
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1);
+}
+.box_button:hover{
+    box-shadow: 0px 0px 5px white;
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1);
+}
+.cr{
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    text-shadow: 0px 0px 1px white;
+}
+input{outline: none;}
+textarea{outline: none;}
