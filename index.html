@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
-<head>
-    <meta charset="UTF-8">
-    <title>START起始页</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/search.svg">
-    <script>
-        var t = null;
-        t = setTimeout(time,1000);
-        function time()
-        {
-            clearTimeout(t);
-            dt = new Date();
-            var h=dt.getHours();
-            var m=dt.getMinutes();
-            var s=dt.getSeconds();
-            if(m<10) m="0"+m;
-            if(s<10) s="0"+s;
-            document.getElementById("showTime").innerHTML =h+":"+m+":"+s;
-            t = setTimeout(time,1000); 
-        }
-        function search() {
-            if (document.getElementById("search_input").value != "") {
-            window.open("https://www.baidu.com/s?ie=utf-8&word=" + document.getElementById("search_input").value,'_blank');  
-            document.getElementById("search_input").value = "";
-        }
-        return false;
-        }
-</script>
-</head>
-<body>
-    <p class="start">CG START PAGE 起始页 网页导航</p>
-<div class="time">
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>START起始页</title>
+  <link rel="icon" href="search.svg">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+  <meta content="起始页" name="description">
+  <meta content="起始页" name="keywords">
+<link href="style.css" rel="stylesheet"> 
+ </head>
+ <body style="background: rgb(237, 237, 237);">
+  <div id="site-main">
+   <div id="main-overlay"></div>
+   <header id="site-header">
+    <div class="container">
+     <div class="float-left" id="header-logo">
+      <a href="https://start.js.cool"><span style="font-size: 28px; font-weight: 700;"><span style="color:red">START</span>起始页</span></a>
+     </div>   
+    </div>
+   </header>
+   <div class="time">
     <label id="showTime">00:00:00</label>
 </div>
-<div class="search">
-    <form onsubmit="return search()">
-        <button class="box_se">百度搜索</button>
-        <input type=text class="box_search" autocomplete="off" autofocus id="search_input">
-        <button class="box_button" onclick="return search()"><img src="img/search.svg" width="16"></button>
-    </form>
+   <div class="headline search-bar">
+    <div class="container">
+     <div class="headline-content">
+      <div class="search-tab">
+       <span class="baidu active">百度</span> 
+       <span class="sogou">搜狗</span> 
+       <span class="google">Google</span> 
+       <span class="bing">Bing</span> 
+       <span class="github">GitHub</span> 
+       <span class="NPM">NPM</span>       
+      </div>
+      <form class="search-form" target="_blank" action="https://www.baidu.com/s">
+       <input class="float-left search-keyword" type="search" autocomplete="off" autofocus="" name="q" placeholder="百度一下，你就知道 "> 
+       <input class="float-right" type="submit" value="搜索">
+      </form>
+     </div>
+    </div>
+   </div><!--
+   <div class="works">
+    <div class="work-link" style="opacity: 1;">
+     <div class="container">
+      <div class="tab">
+       <span class="common active">常用</span> 
+	   <span class="tech">技术</span> 
+       <span class="design">设计</span>        
+       <span class="study">学习</span> 
+       <span class="life">生活</span> 
+	   <span class="amuse">娱乐</span>         
+      </div>
+      <div class="info" style=""><ul><li>热门</li><li><a href="https://www.baidu.com/" target="_blank">百度</a></li><li><a href="https://www.google.com/" target="_blank">谷歌</a></li><li><a href="https://cn.bing.com/" target="_blank">必应</a></li><li><a href="https://www.github.com/" target="_blank">GitHub</a></li><li><a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a></li><li><a href="https://www.gitlab.net/" target="_blank">GitLab</a></li><li><a href="https://www.cnblogs.com/" target="_blank">博客园</a></li></ul><ul><li>便捷</li><li><a href="https://tool.lu/" target="_blank">在线工具</a></li><li><a href="https://fanyi.baidu.com/" target="_blank">词典翻译</a></li><li><a href="http://www.weather.com.cn/live/" target="_blank">天气预报</a></li><li><a href="https://www.kuaidi100.com/" target="_blank">快递查询</a></li><li><a href="https://cn.office-converter.com/" target="_blank">在线转换</a></li><li><a href="https://cli.im/" target="_blank">草料二维码</a></li><li><a href="https://www.bejson.com/" target="_blank">BeJson</a></li></ul><ul><li>社交</li><li><a href="https://www.weibo.com/" target="_blank">微博</a></li><li><a href="https://tieba.baidu.com/" target="_blank">贴吧</a></li><li><a href="https://www.zhihu.com/" target="_blank">知乎</a></li><li><a href="https://www.douban.com/" target="_blank">豆瓣</a></li><li><a href="https://www.v2ex.com/" target="_blank">V2EX</a></li><li><a href="https://www.jianshu.com/" target="_blank">简书</a></li><li><a href="https://twitter.com/" target="_blank">Twitter</a></li></ul><ul><li>资讯</li><li><a href="https://www.infoq.com/" target="_blank">InfoQ</a></li><li><a href="http://www.36kr.com/" target="_blank">36Kr</a></li><li><a href="https://www.huxiu.com/" target="_blank">虎嗅网</a></li><li><a href="https://www.ifanr.com/" target="_blank">爱范儿</a></li><li><a href="https://www.dgtle.com/" target="_blank">数字尾巴</a></li><li><a href="https://dzone.com/" target="_blank">DZone</a></li><li><a href="https://news.ycombinator.com/news" target="_blank">Hacker News</a></li></ul><ul><li>购物</li><li><a href="https://www.taobao.com/" target="_blank">淘宝</a></li><li><a href="https://www.jd.com/" target="_blank">京东</a></li><li><a href="https://www.amazon.cn/" target="_blank">亚马逊</a></li><li><a href="https://www.suning.com/" target="_blank">苏宁易购</a></li><li><a href="https://www.tmall.com/" target="_blank">天猫</a></li><li><a href="https://www.mi.com/" target="_blank">小米商城</a></li><li><a href="https://www.smzdm.com/" target="_blank">什么值得买</a></li></ul><ul><li>视频</li><li><a href="https://www.youku.com/" target="_blank">优酷</a></li><li><a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a></li><li><a href="https://v.qq.com/" target="_blank">腾讯视频</a></li><li><a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a></li><li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li><li><a href="https://www.douyu.com/" target="_blank">斗鱼直播</a></li><li><a href="https://www.huya.com/" target="_blank">虎牙直播</a></li></ul><ul><li>工作</li><li><a href="https://cn.linkedin.com/" target="_blank">领英</a></li><li><a href="https://www.lagou.com/" target="_blank">拉勾网</a></li><li><a href="https://www.zhaopin.com/" target="_blank">智联招聘</a></li><li><a href="https://www.51job.com/" target="_blank">前程无忧</a></li><li><a href="http://www.yingjiesheng.com/" target="_blank">应届生</a></li><li><a href="https://maimai.cn/" target="_blank">脉脉</a></li><li><a href="https://www.v2ex.com/?tab=jobs" target="_blank">酷工作</a></li></ul><ul><li>生活</li><li><a href="https://www.meituan.com/" target="_blank">美团</a></li><li><a href="https://www.dianping.com/" target="_blank">大众点评</a></li><li><a href="https://www.ctrip.com/" target="_blank">携程</a></li><li><a href="https://www.qunar.com/" target="_blank">去哪儿</a></li><li><a href="https://www.alitrip.com/" target="_blank">飞猪</a></li><li><a href="https://kyfw.12306.cn/otn/index/init" target="_blank">12306</a></li><li><a href="https://www.mafengwo.cn/" target="_blank">马蜂窝</a></li></ul></div>
+     </div>
+    </div>
+   </div>-->
+   <footer id="site-footer">
+    <div class="container"> 
+	<div class="copy">start.js.cool<br>
+			© 2022 CNZC<br>
+			<a href="https://github.com/cnzc/start">View on GitHub</a>
+	</div>
+    </div>
+   </footer>
+  </div>
+<script src="main.js"></script>
+<script src="navData.js"></script>
+<script>
+  var t = null;
+  t = setTimeout(time,1000);
+  function time()
+  {
+      clearTimeout(t);
+      dt = new Date();
+      var h=dt.getHours();
+      var m=dt.getMinutes();
+      var s=dt.getSeconds();
+      if(m<10) m="0"+m;
+      if(s<10) s="0"+s;
+      document.getElementById("showTime").innerHTML =h+":"+m+":"+s;
+      t = setTimeout(time,1000); 
+  }
+  function search() {
+      if (document.getElementById("search_input").value != "") {
+      window.open("https://www.baidu.com/s?ie=utf-8&word=" + document.getElementById("search_input").value,'_blank');  
+      document.getElementById("search_input").value = "";
+  }
+  return false;
+  }
+</script>
+<div style="display:none">
 </div>
-<br>
-<p class="pr">快捷导航 :</p>
-<p class="pr"><a class="cr" href="https://clappinggame.net">clappinggame.net<a></p>
-<p class="pr"><a class="cr" href="https://clappinggame.top">clappinggame.top<a></p>
-<p class="cr"><a class="cr" href="https://github.com/cnzc/start">view in GitHub<a></p>
 </body>
 </html>
